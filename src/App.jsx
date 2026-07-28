@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { IoMdAdd } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-
+import Bg from './components/Bg';
 
 function App() {
   const[checkedstat,setcheckedstat]=useState(true)
@@ -63,9 +63,10 @@ function App() {
 
   return (
     <>
+    <Bg/>
       <Navbar/>
         <div className="max-w-5xl mx-auto bg-violet-300 rounded-xl min-h-[90vh] my-6 p-6">
-          <div className="font-bold text-violet-600">ENTER YOUR TODO ITEMS</div>
+          <div className="font-bold text-violet-600 text-center italic text-xl">ENTER YOUR TODO ITEMS</div>
           <div className="flex gap-2.5 mt-2"> 
             <input type="text" onChange={handleChange} value={todo} placeholder="Add a new todo..." className="bg-white min-w-[60vw] p-1.5 flex-1"/>
             <button onClick={handleAdd} className=" bg-violet-600 text-white rounded-md px-3 py-1.5"><IoMdAdd /></button>
